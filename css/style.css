@@ -1,0 +1,43 @@
+/* Variables */
+:root {
+    /* Colors */
+    --primary-color: #046efd;
+    --secondary-color: #ffde59;
+    --tertiary-color: #ff914d;
+    --background-color: #0b2545;
+    --text-primary-color: #ffffff;
+    --text-secondary-color: #4c4c4c;
+
+    /* Fonts */
+    --honk: "Honk", "Press Start 2P", monospace;
+    --press-start: "Press Start 2P", monospace;
+}
+
+/* Google Fonts */
+/* Honk */
+ /* <morph>: Use a value from 0 to 45 */
+ /* <shadow length>: Use a value from 0 to 100 */
+
+.honk-font {
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 45,
+    "SHLN" 100;
+}
+
+/* logo styles */
+#logo-container {
+    text-align: center;
+}
+#logo-image {
+    width: 300px;
+    height: auto;
+}
+
+/* Navbar style */
+nav {
+    position: sticky
+}
