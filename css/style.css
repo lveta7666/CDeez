@@ -146,6 +146,7 @@ p {
     color: var(--tertiary-color);
 }
 
+/* Style for adding the same look that the navbar has to other elements */
 .window {
     padding: 20px;
     background-color: var(--primary-color);
