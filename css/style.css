@@ -6,8 +6,6 @@
     --secondary-color: #fff16f;
     --background-color: #e7e7e7;
     --tertiary-color: #000000;
-    --text-primary-color: #ffffff;
-    --text-secondary-color: #706C61;
 
     /* Fonts */
     --honk: "Honk", "Press Start 2P", monospace;
@@ -15,13 +13,12 @@
 
     /* Other */
     --blocky-shadow: drop-shadow(6px 6px 0px rgba(0, 0, 0, 0.6));
-    --blocky-shadow-intense: drop-shadow(10px 8px 0px rgba(0, 0, 0, 0.9));
 }
 
 /* Google Fonts */
-/* Honk */
- /* <morph>: Use a value from 0 to 45 */
- /* <shadow length>: Use a value from 0 to 100 */
+ /* Honk */
+  /* <morph>: Use a value from 0 to 45 */
+  /* <shadow length>: Use a value from 0 to 100 */
 
 .honk-font {
   font-family: "Honk", system-ui;
@@ -32,6 +29,13 @@
     "MORF" 45,
     "SHLN" 50;
 }
+
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 
 /* All Encompassing Styles */
 * {
@@ -57,9 +61,13 @@ body {
 .navbar {
     background-color: var(--primary-color) !important;
     opacity: 1 !important;
-    border-top: #fff16f 1rem double;
-    border-bottom: #fff16f 1rem double;
-    filter: var(--blocky-shadow-intense);
+    border-top: var(--secondary-color) 1rem double;
+    border-bottom: var(--secondary-color) 1rem double;
+    filter: var(--blocky-shadow);
+}
+
+.navbar-nav {
+    padding: 0.5rem 0;
 }
 
 .nav-link {
@@ -73,6 +81,7 @@ body {
     "MORF" 15,
     "SHLN" 30;
     transition: font-variation-settings 0.3s;
+    filter: var(--blocky-shadow);
 }
 
 .nav-link:hover {
@@ -108,11 +117,39 @@ body {
     content: "▼"; /* Custom arrow */
     font-size: 1rem;
     margin-left: 0rem;
-    color: var(--text-primary-color);
+    color: var(--background-color);
     transition: transform 0.3s ease; /* Smooth animation */
 }
 
 .dropdown-toggle[aria-expanded="true"]::after {
     transform: rotate(180deg); /* Rotate arrow when dropdown is open */
     color: var(--secondary-color); /* Optional: Change color */
+}
+
+/* Content styling */
+h1 {
+    filter: var(--blocky-shadow);
+    font-family: var(--honk);
+    font-size: 5rem;
+    color: var(--tertiary-color);
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-variation-settings:
+    "MORF" 15,
+    "SHLN" 30;
+}
+
+p {
+    font-family: var(--press-start);
+    font-size: 1rem;
+    color: var(--tertiary-color);
+}
+
+.window {
+    padding: 20px;
+    background-color: var(--primary-color);
+    border-top: var(--secondary-color) 1rem double;
+    border-bottom: var(--secondary-color) 1rem double;
+    filter: var(--blocky-shadow);
 }
