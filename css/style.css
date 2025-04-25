@@ -1,16 +1,21 @@
 /* Variables */
 :root {
     /* Colors */
-    --primary-color: #046efd;
-    --secondary-color: #ffde59;
-    --tertiary-color: #ff914d;
-    --background-color: #0b2545;
+    
+    --primary-color: #ff41a8;
+    --secondary-color: #fff16f;
+    --background-color: #e7e7e7;
+    --tertiary-color: #000000;
     --text-primary-color: #ffffff;
-    --text-secondary-color: #4c4c4c;
+    --text-secondary-color: #706C61;
 
     /* Fonts */
     --honk: "Honk", "Press Start 2P", monospace;
     --press-start: "Press Start 2P", monospace;
+
+    /* Other */
+    --blocky-shadow: drop-shadow(6px 6px 0px rgba(0, 0, 0, 0.6));
+    --blocky-shadow-intense: drop-shadow(10px 8px 0px rgba(0, 0, 0, 0.9));
 }
 
 /* Google Fonts */
@@ -25,7 +30,17 @@
   font-style: normal;
   font-variation-settings:
     "MORF" 45,
-    "SHLN" 100;
+    "SHLN" 50;
+}
+
+/* All Encompassing Styles */
+* {
+    font-family: var(--press-start);
+    font-size: 100%;
+}
+
+body {
+    background-color: var(--background-color);
 }
 
 /* logo styles */
@@ -35,9 +50,69 @@
 #logo-image {
     width: 300px;
     height: auto;
+    filter: var(--blocky-shadow);
 }
 
-/* Navbar style */
-nav {
-    position: sticky
+/* Navbar styling */
+.navbar {
+    background-color: var(--primary-color) !important;
+    opacity: 1 !important;
+    border-top: #fff16f 1rem double;
+    border-bottom: #fff16f 1rem double;
+    filter: var(--blocky-shadow-intense);
+}
+
+.nav-link {
+    opacity: 1 !important;
+    color: var(--tertiary-color) !important;
+    font-family: "Honk", system-ui !important;
+    font-weight: 400;
+    font-size: 3rem;
+    font-style: normal;
+    font-variation-settings:
+    "MORF" 15,
+    "SHLN" 30;
+    transition: font-variation-settings 0.3s;
+}
+
+.nav-link:hover {
+    opacity: 1 !important;
+    background-color: transparent !important; /* Optional */
+    font-variation-settings: 
+    "MORF" 0,
+    "SHLN" 100;
+}
+
+.dropdown-item {
+    opacity: 1 !important;
+    color: var(--tertiary-color) !important;
+    font-family: "Honk", system-ui !important;
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: normal;
+    font-variation-settings:
+    "MORF" 15,
+    "SHLN" 30;
+    transition: font-variation-settings 0.3s;
+}
+
+.dropdown-item:hover {
+    opacity: 1 !important;
+    background-color: transparent !important; /* Optional */
+    font-variation-settings: 
+    "MORF" 0,
+    "SHLN" 100;
+}
+
+.dropdown-toggle::after {
+    content: "▼"; /* Custom arrow */
+    font-size: 1rem;
+    margin-left: 0rem;
+    color: var(--text-primary-color);
+    transition: transform 0.3s ease; /* Smooth animation */
+}
+
+.dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(180deg); /* Rotate arrow when dropdown is open */
+    color: var(--secondary-color); /* Optional: Change color */
 }
