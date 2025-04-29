@@ -4,7 +4,8 @@
     
     --primary-color: #ff41a8;
     --secondary-color: #fff16f;
-    --background-color: #e7e7e7;
+    /* --background-color: #e7e7e7; */
+    --background-color: powderblue;
     --tertiary-color: #000000;
 
     /* Fonts */
@@ -44,6 +45,7 @@
 }
 
 body {
+    /* background-color: var(--background-color); */
     background-color: var(--background-color);
 }
 
@@ -126,6 +128,14 @@ body {
     color: var(--secondary-color); /* Optional: Change color */
 }
 
+.disabled {
+    opacity: 1 !important;
+    background-color: transparent !important; /* Optional */
+    font-variation-settings: 
+    "MORF" 5,
+    "SHLN" 100;
+}
+
 /* Content styling */
 h1 {
     filter: var(--blocky-shadow);
@@ -146,6 +156,10 @@ p {
     color: var(--tertiary-color);
 }
 
+.window img {
+    margin: 1rem;
+}
+
 /* Style for adding the same look that the navbar has to other elements */
 .window {
     padding: 20px;
@@ -153,4 +167,41 @@ p {
     border-top: var(--secondary-color) 1rem double;
     border-bottom: var(--secondary-color) 1rem double;
     filter: var(--blocky-shadow);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.window .window {
+    padding: 5px;
+    background-color: var(--background-color);
+    border-top: var(--secondary-color) 1rem double;
+    border-bottom: var(--secondary-color) 1rem double;
+    filter: var(--blocky-shadow);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.window .window .window {
+    padding: 2px;
+    background-color: var(--primary-color);
+    border-top: var(--secondary-color) 1rem double;
+    border-bottom: var(--secondary-color) 1rem double;
+    filter: var(--blocky-shadow);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* Style for product listings */
+.product-image-container {
+    width: 95%;
+    overflow: hidden;
+    filter: var(--blocky-shadow);
+}
+
+.product-image-container img {
+    width: 100%;
+}
+
+.window:hover > a, .window:hover > img {
+    color: white !important;
 }
