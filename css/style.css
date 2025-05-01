@@ -44,6 +44,10 @@
     font-size: 100%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     /* background-color: var(--background-color); */
     background-color: var(--background-color);
@@ -156,19 +160,24 @@ p {
     color: var(--tertiary-color);
 }
 
-.window img {
-    margin: 1rem;
-}
-
 /* Style for adding the same look that the navbar has to other elements */
 .window {
-    padding: 20px;
+    padding: 10px;
     background-color: var(--primary-color);
     border-top: var(--secondary-color) 1rem double;
     border-bottom: var(--secondary-color) 1rem double;
     filter: var(--blocky-shadow);
     margin-left: 1rem;
     margin-right: 1rem;
+}
+
+.window img {
+    margin: 1rem;
+}
+
+.window h1 {
+    margin: 5px;
+    filter: var(--blocky-shadow);
 }
 
 .window .window {
